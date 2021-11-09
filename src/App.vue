@@ -1,9 +1,11 @@
 <template>
   <div>
     <h2 class="mb-3">Varid Simple Task</h2>
-    <router-link to="/add-currency">Add currency</router-link>
-    <router-link to="/currency-table">Currency table</router-link>
-    <router-link to="/exchange-converter">Exchange converter</router-link>
+    <nav class="nav">
+      <router-link to="/add-currency">Add currency</router-link>
+      <router-link to="/currency-table">Currency table</router-link>
+      <router-link to="/exchange-converter">Exchange converter</router-link>
+    </nav>
     <router-view />
   </div>
 </template>
@@ -12,9 +14,6 @@
 
 export default {
   name: 'App',
-  components: {
-
-  }
 }
 </script>
 
@@ -25,5 +24,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.nav a{
+  text-decoration: none;
 }
 </style>

@@ -4,40 +4,27 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Home.vue'),
+    component: () => import('../components/Home.vue'),
+
+    // Nested Routes
     children: [
         {
             path: '/add-currency',
             name: 'Add currency',
-            component: () => import(/* webpackChunkName: "about" */ '../components/AddCurrency.vue'),
+            component: () => import('../components/AddCurrency.vue'),
           },
           {
             path: '/currency-table',
             name: 'Currency table',
-            component: () => import(/* webpackChunkName: "about" */ '../components/CurrencyTable.vue'),
+            component: () => import('../components/CurrencyTable.vue'),
           },
           {
             path: '/exchange-converter',
             name: 'Exchange converter',
-            component: () => import(/* webpackChunkName: "about" */ '../components/ExchangeConverter.vue'),
+            component: () => import('../components/ExchangeConverter.vue'),
           },
     ]
   },
-//   {
-//     path: '/add-currency',
-//     name: 'Add currency',
-//     component: () => import(/* webpackChunkName: "about" */ '../components/AddCurrency.vue'),
-//   },
-//   {
-//     path: '/currency-table',
-//     name: 'Currency table',
-//     component: () => import(/* webpackChunkName: "about" */ '../components/CurrencyTable.vue'),
-//   },
-//   {
-//     path: '/exchange-converter',
-//     name: 'Exchange converter',
-//     component: () => import(/* webpackChunkName: "about" */ '../components/ExchangeConverter.vue'),
-//   },
 ]
 
 const router = createRouter({
