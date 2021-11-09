@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         count(){
-            this.result = this.quantity * this.stateData[this.select]
+            this.result = this.quantity * this.stateData[this.select];
         }
     },
     data: function(){
